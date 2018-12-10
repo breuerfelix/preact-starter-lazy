@@ -25,7 +25,7 @@ module.exports = {
 		filename: '[name].bundle.js',
 		chunkFilename: '[name].bundle.js',
 		path: path.join(__dirname, 'build'),
-		publicPath: '/scriptworld.net'
+		publicPath: '/preact-starter-lazy'
 	},
 
 	module: {
