@@ -6,9 +6,9 @@ export default class NavBar extends Component {
 	render() {
 		return (
 			<div class='navbar'>
-				<div class='container'>
-					navbar
-				</div>
+				<a href='/'>home</a>
+				<a href='/projects'>projects</a>
+				<a href='/about'>about</a>
 			</div>
 		);
 	}
