@@ -14,13 +14,13 @@ class App extends Component {
 			<div>
 				<NavBar />
 				<Router>
-					<Home default path="/" />
+					<Home default path="/preact-starter-lazy/" />
 					<AsyncRoute
-						path="/about"
+						path="/preact-starter-lazy/about"
 						getComponent={About}
 					/>
 					<AsyncRoute
-						path="/projects"
+						path="/preact-starter-lazy/projects"
 						getComponent={Projects}
 					/>
 				</Router>			

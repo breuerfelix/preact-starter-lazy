@@ -6,9 +6,9 @@ export default class NavBar extends Component {
 	render() {
 		return (
 			<div class='navbar'>
-				<a href='/'>home</a>
-				<a href='/projects'>projects</a>
-				<a href='/about'>about</a>
+				<a href='/preact-starter-lazy/'>home</a>
+				<a href='/preact-starter-lazy/projects'>projects</a>
+				<a href='/preact-starter-lazy/about'>about</a>
 			</div>
 		);
 	}
