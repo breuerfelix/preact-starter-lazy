@@ -1,5 +1,6 @@
 env:
   es6: true
+  browser: true
 extends:
   - 'eslint:recommended'
 parser: 'babel-eslint'
@@ -21,4 +22,6 @@ rules:
   semi:
     - error
     - always
+  "no-unused-vars":
+    - 0
   "no-console": 0

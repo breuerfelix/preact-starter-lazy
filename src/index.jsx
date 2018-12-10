@@ -23,7 +23,7 @@ class App extends Component {
 						path="/preact-starter-lazy/projects"
 						getComponent={Projects}
 					/>
-				</Router>			
+				</Router>
 				<div>
 					footer
 				</div>
