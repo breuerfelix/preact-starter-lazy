@@ -1,6 +1,7 @@
 const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 module.exports = {
 	entry: [
@@ -23,7 +24,7 @@ module.exports = {
 	output: {
 		filename: '[name].bundle.js',
 		chunkFilename: '[name].bundle.js',
-		path: path.join(__dirname, 'build'),
+		path: path.join(__dirname, 'dist'),
 		publicPath: '/'
 	},
 
@@ -45,15 +46,16 @@ module.exports = {
 			{
 				test: /\.scss$/,
 				use: [
-						"style-loader", // creates style nodes from JS strings
-						"css-loader", // translates CSS into CommonJS
-						"sass-loader" // compiles Sass to CSS, using Node Sass by default
+						'style-loader', // creates style nodes from JS strings
+						'css-loader', // translates CSS into CommonJS
+						'sass-loader' // compiles Sass to CSS, using Node Sass by default
 				]
 			}
 		]
 	},
 
 	plugins: [
+		new CleanWebpackPlugin(['dist']),
 		new HtmlWebpackPlugin({
 			title: 'scriptworld.net - felix breuer',
 			template: path.join(__dirname, 'public/index.html')
