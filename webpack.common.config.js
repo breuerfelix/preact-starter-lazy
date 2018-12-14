@@ -1,16 +1,12 @@
 const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 module.exports = {
 	entry: [
 		'@babel/polyfill',
 		'./src'
 	],
-
-	mode: 'production',
-	devtool: 'none',
 
 	resolve: {
 		extensions: [ '.js', '.jsx' ],
@@ -21,12 +17,11 @@ module.exports = {
 		hints: false
 	},
 
-	// where to dump the output of a production build
 	output: {
 		filename: '[name].bundle.js',
 		chunkFilename: '[name].bundle.js',
 		path: path.join(__dirname, 'dist'),
-		publicPath: '/preact-starter-lazy/'
+		publicPath: '/'
 	},
 
 	module: {
@@ -40,23 +35,23 @@ module.exports = {
 					],
 					plugins: [
 						[ '@babel/plugin-transform-react-jsx', { pragma: 'h' } ],
-						'@babel/plugin-syntax-dynamic-import'
+						'@babel/plugin-syntax-dynamic-import',
+						'@babel/plugin-proposal-class-properties'
 					]
 				}
 			},
 			{
 				test: /\.scss$/,
 				use: [
-						'style-loader', // creates style nodes from JS strings
-						'css-loader', // translates CSS into CommonJS
-						'sass-loader' // compiles Sass to CSS, using Node Sass by default
+					'style-loader',
+					'css-loader',
+					'sass-loader'
 				]
 			}
 		]
 	},
 
 	plugins: [
-		new CleanWebpackPlugin(['dist']),
 		new HtmlWebpackPlugin({
 			title: 'scriptworld.net',
 			template: path.join(__dirname, 'public/index.html')
