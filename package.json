@@ -8,8 +8,8 @@
 		"start": "webpack-dev-server",
 		"build": "webpack",
 		"deploy": "webpack --config webpack.prod.config.js",
-		"lint": "eslint --config .eslintrc.yml --ext jsx --ext js .",
-		"lint-fix": "eslint --fix --config .eslintrc.yml --ext jsx --ext js ."
+		"lint": "eslint --config .eslintrc.yml --ext jsx --ext js src",
+		"lint-fix": "eslint --fix --config .eslintrc.yml --ext jsx --ext js src"
 	},
 	"author": "Felix Breuer",
 	"license": "MIT",
