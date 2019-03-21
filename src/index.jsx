@@ -17,11 +17,11 @@ class App extends Component {
 					<Home default path="/preact-starter-lazy/" />
 					<AsyncRoute
 						path="/preact-starter-lazy/about"
-						getComponent={About}
+						getComponent={ About }
 					/>
 					<AsyncRoute
 						path="/preact-starter-lazy/projects"
-						getComponent={Projects}
+						getComponent={ Projects }
 					/>
 				</Router>
 				<div>
